@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usabilidad Web</title>
+    <link rel="stylesheet" href="../Css/UX.css">
+</head>
+
+<body>
+    <div id="Home">
+        <img src="../Resources/home.png" alt="home">
+        <a href="../Html/index.html">
+            <h1>Investaciones Cortas</h1>
+        </a>
+    </div>
+
+    <div id="outer">
+        <header>
+            <div id=header-content>
+                <div id=logo>
+                    <img src="../Resources/UX/Uxlogo.png">
+                </div>
+                <div id=parrafo>
+                    <h1>Usabilidad Web</h1>
+                    <b>
+                        <p>¿Qué es la Usabilidad Web?</p>
+                    </b>
+                    <p> La usabilidad web es la facilidad con la que los usuarios pueden navegar y
+                        utilizar una página web para lograr sus objetivos de manera eficiente, efectiva y satisfactoria.
+                        Se centra en crear sitios intuitivos, accesibles y agradables para todos los visitantes.</p>
+                </div>
+            </div>
+        </header>
+
+        <div id="Titulos">
+            <h2>Importancia de la Usabilidad Web</h2>
+            <div id=caja>
+                <ul>
+                    <li><b>Mejora la experiencia del usuario (UX):</b> Hace que el uso del sitio sea agradable y cómodo,
+                        facilitando que las personas logren sus objetivos.</li>
+                    <li><b>Aumenta la satisfacción y confianza del visitante:</b> Los usuarios satisfechos tienen una
+                        mejor percepción del sitio y es más probable que regresen o lo recomienden.</li>
+                    <li><b>Reduce errores y frustraciones:</b> Un diseño usable minimiza los problemas y confusiones,
+                        evitando que los usuarios se equivoquen o se sientan frustrados.</li>
+                    <li><b>Incrementa el tiempo de permanencia y la conversión:</b> Los usuarios permanecen más tiempo
+                        navegando en sitios fáciles de usar y es más probable que realicen acciones valiosas (compras,
+                        registros, etc.).</li>
+                    <li><b>Disminuye los costos de soporte y capacitación:</b> Si el sitio es intuitivo,
+                        los usuarios requieren menos ayuda y es más fácil enseñarles a utilizarlo.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h1>Principios de Jakob Nielsen</h1>
+        <div id="Main">
+            <h2>Visibilidad del estado del sistema</h2>
+            <div id="caja">
+                <h3>El sistema debe mantener siempre informados a los usuarios sobre lo que está ocurriendo,
+                    mediante una retroalimentación apropiada y en un tiempo razonable.</h3>
+                <ul>
+                    <li>Por ejemplo una notificación en un boton a la hora de pulsarlo indicando lo que pasa</li>
+                </ul>
+                <div><button id="Button" onclick="alert('Se han mandado los datos')">Entregar</button></div>
+            </div>
+
+            <h2>Relación entre el sistema y el mundo real</h2>
+            <div id="caja">
+                <h3>El sistema debe hablar el idioma de los usuarios, con palabras, frases y conceptos familiares,
+                    siguiendo las convenciones del mundo real.</h3>
+                <ul>
+                    <li>Ejemplo: Uso del icono de una casa como referecia para ir al menu principal:</li>
+                    <div id="Home">
+                        <img src="../Resources/Home.png" alt="home icon">
+                        <a href="../Html/UX.html">
+                            <h1>Home</h1>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+
+            <h2>Control y libertad del usuario</h2>
+            <div id="caja">
+                <h3>Los usuarios suelen elegir funciones por error y necesitarán una manera de desahacer sus acciones
+                    sin tener que pasar por procesos extensos.</h3>
+                <ul>
+                    <li>Ejemplo: Los enlaces subrayados y en azul indican que son clicables, como en la mayoría de los
+                        sitios web. Recurso gráfico:</li>
+                </ul>
+                <div id="Enlace">
+                    <h3><a href="https://www.google.com" target="_blank">Enlace a Google</a></h3>
+                </div>
+            </div>
+
+            <h2>Prevención de errores</h2>
+            <div id="caja">
+                <h3>Mejor que buenos mensajes de error es un diseño cuidadoso que prevenga los problemas antes de que
+                    ocurran.</h3>
+                <ul>
+                    <li>Botón de “Enviar” desactivado hasta que todos los campos del formulario estén completos. Recurso
+                        gráfico:</li>
+                </ul>
+                <div id="Formulario">
+                    <input type="text" id="TextInput" placeholder="Escribe algo...">
+                    <button id="ButtonInput" disabled>Enviar</button>
+
+                    <script>
+                        const input = document.getElementById('TextInput');
+                        const boton = document.getElementById('ButtonInput');
+
+                        input.addEventListener('input', function () {
+                            boton.disabled = input.value.trim() === ""
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <h2>Reconocer antes que recordar</h2>
+            <div id="caja">
+                <h3>Minimiza la carga de memoria del usuario mostrando objetos, acciones y opciones visibles.
+                    El usuario no debe recordar información de una parte a otra del diálogo.</h3>
+                <ul>
+                    <li>Ejemplo: Paginas visitadas anteriormente con un color morado enves de azul.</li>
+                </ul>
+                <div id="Enlace">
+                    <h3><a href="https://www.google.com" target="_blank">Enlace a Google</a></h3>
+                    <h3><a href="https://www.wikipedia.org" target="_blank">Enlace a Wikipedia</a></h3>
+                </div>
+            </div>
+
+            <h2>Flexibilidad y eficiencia de uso</h2>
+            <div id="caja">
+                <h3>Para los usuarios con experiencia usando navegadores o aplicaciones web se les tiene que dar
+                    opciones rapidas
+                    y atajos para que puedan realizar tareas de manera más eficiente.</h3>
+                </h3>
+                <ul>
+                    <li>Ejemplo: En youtube puedes usar el espacio para que el video se pause y las flechas para subir y
+                        bajar
+                        el volumen, en vez de tener que usar el mouse para hacer estas acciones.</li>
+                    </li>
+                </ul>
+                <div id="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dbNi7G-P6EU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <h2>Diseño estético y minimalista</h2>
+            <div id="caja">
+                <h3>Los diálogos no deben contener información irrelevante o rara vez necesaria.
+                    Cada unidad extra de información compite con las unidades relevantes.</h3>
+                <ul>
+                    <li>Ejemplo: En las paginas actuales se busca el diseño minimalista sobre todo, mostrando
+                        solo la información necesaria y evitando el uso de colores estridentes o elementos innecesarios.
+                    </li>
+                </ul>
+                <div id="chat">
+                    <img src="../Resources/UX/Chat.png" alt="chat">
+                </div>
+            </div>
+
+            <h2>Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores</h2>
+            <div id="caja">
+                <h3>Los mensajes de error deben expresarse en un lenguaje sencillo,
+                    indicar con precisión el problema y sugerir una solución constructiva.</h3>
+                <ul>
+                    <li>Ejemplo: Indicar al usuario que no ha escrito nada en la banjeda del formulario con una
+                        advertencia resaltarlo con un color</li>
+                </ul>
+                <div id="Formulario">
+                    <input type="text" id="TxtInput" placeholder="Escribe algo...">
+                    <button id="BtInput">Enviar</button>
+
+                    <script>
+                        const txtInput = document.getElementById('TxtInput');
+                        const btInput = document.getElementById('BtInput');
+
+                        btInput.addEventListener('click', function () {
+                            if (txtInput.value.trim() === "") {
+                                txtInput.placeholder.color = "red";
+                                txtInput.placeholder = "Por favor, escribe algo antes de enviar.";
+                                txtInput.style.borderColor = "red";
+                            } else {
+                                alert("Datos enviados correctamente");
+                                txtInput.style.borderColor = "black";
+                                txtInput.placeholder.style.color = "black";
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <h2>Ayuda y documentación</h2>
+            <div id="caja">
+                <h3>Aunque lo ideal es que el sistema se use sin documentación, 
+                    puede ser necesario proporcionar ayuda y documentación fácil de buscar y centrada en la tarea del usuario.</h3>
+                <ul><li>Ejemplo: Algunos de los recursos más utilizados para dar soporte a personas es mediante un 
+                    Sección de Preguntas frecuentes (FAQs) o documentación aparte donde explique cada apartado de la pagina
+                    o aplicación</li><li>Tambien se podria realizar con videos para personas que no entiendan tanto de
+                    tecnología, como por ejemplo un video de YouTube que explique como usar la pagina. En este video
+                    se explica como realizar un pago de servicios en la aplicación de BN movil</li></ul>
+                <div id="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RaovD4P6Mag"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div id="Nombre">
+            <div>
+                <p>
+                    <b>Neitan Morales</b>
+                </p>
+            </div>
+        </div>
+        <div id="Referencias">
+            <div>
+                <p>
+                    <b>Referencias</b>
+                <ul>
+                    <li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=es"
+                            target="_blank">Google Developers</a></li>
+                    <li><a href="https://blog.hubspot.es/marketing/guia-completa-seo" target="_blank">HubSpot</a>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
