@@ -95,6 +95,7 @@ li {
     border-bottom: 0.05cm groove;
     padding: 20px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 #header-content img {
@@ -273,7 +274,7 @@ li {
         padding: 0 5px;
     }
 
-    #caja iframe{
+    #box iframe{
     width: 300px;
     height: 100%;
     border: none;

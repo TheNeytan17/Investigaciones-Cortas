@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Accessibility</title>
+    <link rel="stylesheet" href="../Css/Accessibility.css">
 </head>
+
 <body>
-    
+    <div id="Home">
+        <img src="../Resources/home.png" alt="home">
+        <a href="../Html/index.html">
+            <h1>Investaciones Cortas</h1>
+        </a>
+    </div>
+
+    <div id="outer">
+        <header>
+            <div id=header-content>
+                <div id=logo>
+                    <img src="../Resources/Accessibility/Page.png">
+                </div>
+                <div id=parrafo>
+                    <h1>Accesabilidad Web</h1>
+                    <b>
+                        <p>¿Qué es la Accesabilidad Web?</p>
+                    </b>
+                    <p> La accesibilidad web consiste en diseñar y desarrollar sitios, aplicaciones y
+                        contenidos digitales de forma que cualquier persona pueda utilizarlos,
+                        independientemente de sus características o circunstancias. Esto implica crear
+                        experiencias web que sean fáciles de entender, navegar e interactuar para todo el mundo,
+                        considerando la diversidad de usuarios, dispositivos, situaciones y contextos de uso.
+                        El objetivo es que la web sea verdaderamente universal..</p>
+                </div>
+            </div>
+        </header>
+
+        <div id="Titulos">
+            <h2>Importancia de la Accesabilidad Web</h2>
+            <div id=caja>
+                <ul>
+                    <li><b>Permite que todos puedan acceder a la información y servicios en línea.</b></li>
+                    <li><b>Fomenta la igualdad de oportunidades:</b> Cualquier persona, sin importar sus capacidades,
+                        contexto o dispositivo, puede participar y beneficiarse de la web.</li>
+                    <li><b>Cumple con normativas y buenas prácticas internacionales.</b></li>
+                    <li><b>Mejora la usabilidad:</b> Hace que los sitios sean más claros, intuitivos y
+                        fáciles de usar para todos, incluyendo personas mayores, usuarios de móviles,
+                        personas con conexiones lentas, etc.</li>
+                    <li><b>Amplía el alcance y reputación de los proyectos web.</b></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="header-content">
+            <div id="logo">
+                <img src="../Resources/Accessibility/WCAG.png" alt="WCAG Logo">
+            </div>
+            <div id="parrafo">
+                <h1>Principios fundamentales de la accesibilidad web según las WCAG</h1>
+                <p>Las WCAG (Web Content Accessibility Guidelines) son un conjunto de pautas desarrolladas por el
+                    W3C para hacer que el contenido web sea más accesible para personas con discapacidades. Estas pautas
+                    se basan en cuatro principios fundamentales, conocidos como los principios <b>POUR:</b></p>
+            </div>
+        </div>
+
+        <div id="Main">
+            <div id="Perceptible">
+                <h2>Perceptible</h2>
+                <div id="caja">
+                    <h3>La información y los componentes de la interfaz de usuario deben presentarse a los
+                        usuarios de manera que puedan percibirlos.</h3>
+                    <p>Ejemplos:</p>
+                    <ul>
+                        <li>Proporcionar texto alternativo para imágenes.</li>
+                        <li>Usar colores con suficiente contraste.</li>
+                        <li>Ofrecer subtítulos para videos.</li>
+                    </ul>
+                    <p>Ejemplo: Se utiliza una imagen a la cual a la hora de ponerle el
+                        mouse encima se le muestra un texto alternativo.</p>
+                    <div id="chat">
+                        <img src="../Resources/Accessibility/Programing.png" alt="Esta persona está programando"
+                            title="Esta persona está programando">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Operable">
+                <h2>Operable</h2>
+                <div id="caja">
+                    <h3>Los componentes de la interfaz y la navegación deben ser utilizables para todos los usuarios.
+                        (por
+                        ejemplo, con teclado, mouse, pantalla táctil, etc.)</h3>
+                    <p>Ejemplos:</p>
+                    <ul>
+                        <li>Todo debe poder ser manejado con teclado.</li>
+                        <li>Dar tiempo suficiente para leer y usar el contenido.</li>
+                        <li>Evitar contenido que pueda provocar convulsiones (como destellos).</li>
+                    </ul>
+                    <p>Ejemplo: Un menu de navegación que se puede utilizar con click o navegando con TAP para
+                        ir a partes específicas de la página.</p>
+                    <ul>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Titulos">Importancia de la Usabilidad Web</a></li>
+                        <li><a href="#Perceptible">Perceptible</a></li>
+                        <li><a href="#Operable">Operable</a></li>
+                        <li><a href="#Comprensible">Comprensible</a></li>
+                        <li><a href="#Robusto">Robusto</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="Comprensible">
+                <h2>Comprensible</h2>
+                <div id="caja">
+                    <h3>La información y la operación de la interfaz deben ser comprensibles para todos los usuarios. En
+                        caso de encontrar
+                        errores, estos deben ser identificables y corregibles para el usuario.</h3>
+                    </h3>
+                    <p>Ejemplos:</p>
+                    <ul>
+                        <li>El texto debe ser legible y comprensible.</li>
+                        <li>Las páginas deben aparecer y operar de manera predecible.</li>
+                        <li>Ayudar a los usuarios a evitar y corregir errores.</li>
+                    </ul>
+                    <p>Ejemplo: Un formalario que indique que ocupa poner y proporcionar texto de error si encuenta
+                        algun problema</p>
+
+                    <div id="Formulario">
+                        <input type="text" id="TxtInput" placeholder="Escribe algo...">
+                        <button id="BtInput">Enviar</button>
+
+                        <script>
+                            const txtInput = document.getElementById('TxtInput');
+                            const btInput = document.getElementById('BtInput');
+
+                            btInput.addEventListener('click', function () {
+                                if (txtInput.value.trim() === "") {
+                                    txtInput.placeholder.color = "red";
+                                    txtInput.placeholder = "Por favor, escribe algo antes de enviar.";
+                                    txtInput.style.borderColor = "red";
+                                } else {
+                                    alert("Datos enviados correctamente");
+                                    txtInput.style.borderColor = "black";
+                                    txtInput.placeholder.style.color = "black";
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Robusto">
+                <h2>Robusto</h2>
+                <div id="caja">
+                    <h3>El contenido debe ser robusto para que pueda ser interpretado de manera confiable por una amplia
+                        variedad de agentes de usuario, incluidos los tecnologías de asistencia.</h3>
+                    <p>Ejemplos:</p>
+                    <ul>
+                        <li>Usar código HTML correcto y bien estructurado.</li>
+                        <li>Compatibilidad con futuros navegadores y tecnologías de asistencia.</li>
+                        <li>Asegurar que pueda ser mostrado en diferentes pantallas con diferentes dimensiones</li>
+                    </ul>
+                    <p>Ejemplo: En este sitio web la pagina se moldea acorde a la pantalla del dispositivo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div id="Nombre">
+            <div>
+                <p>
+                    <b>Neitan Morales</b>
+                </p>
+            </div>
+        </div>
+        <div id="Referencias">
+            <div>
+                <p>
+                    <b>Referencias</b>
+                <ul>
+                    <li><a href="https://www.accesibilidad-web.info/wcag-principio-pauta-criterio-conformidad"
+                            target="_blank">Usabilidad Web</a></li>
+                    <li><a href="https://blog.hubspot.es/website/que-es-accesibilidad-web#que"
+                            target="_blank">HubSpot</a></li>
+                            <li><a href="https://www.iberdrola.com/innovacion/que-es-accesibilidad-web"
+                            target="_blank">Iberdrola</a></li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
